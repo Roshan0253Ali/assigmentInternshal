@@ -9,13 +9,13 @@ function App() {
   const [email, setEmail] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/events')
+    axios.get('https://assigmentinternshal-5.onrender.com/api/events')
       .then(res => setEvents(res.data));
   }, []);
 
   const handleGetTickets = async () => {
     if (!email || !selectedEvent) return;
-    await axios.post('http://localhost:5000/api/subscribe', {
+    await axios.post('https://assigmentinternshal-5.onrender.com/api/subscribe', {
       email,
       eventId: selectedEvent._id,
     });
