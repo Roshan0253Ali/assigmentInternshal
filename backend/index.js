@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/sydney_events', {
+mongoose.connect('mongodb+srv://roshanali0253:kzbwH45cttNSptDN@assingmentcluster.ultvugc.mongodb.net/sydney_events', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
